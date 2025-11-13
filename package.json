@@ -1,4 +1,7 @@
 {
+  "name": "my-law-site",
+  "version": "1.0.0",
+  "description": "Vercel Serverless Function and Static HTML Site",
   "dependencies": {
     "fast-xml-parser": "^4.2.5"
   }
