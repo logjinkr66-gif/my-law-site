@@ -1,8 +1,4 @@
 {
-  "scripts": {
-    "build": "echo 'Vercel static build fix: ignoring public folder' && exit 0",
-    "vercel-build-fix": "echo 'Vercel build neutralized'"
-  },
   "dependencies": {
     "fast-xml-parser": "^4.2.5"
   }
