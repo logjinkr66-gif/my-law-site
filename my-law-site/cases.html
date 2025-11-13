@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>성공사례 | 법무법인 해동 의료전문변호사 정용진</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>body{font-family:'Noto Sans KR',sans-serif;}</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-white shadow-md sticky top-0 z-50" x-data="{open:false}">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
+      <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <a href="index.html" class="text-3xl md:text-4xl font-extrabold text-blue-900 leading-none whitespace-nowrap">법무법인 해동</a>
+        <span class="text-base md:text-lg font-semibold text-gray-700 leading-none whitespace-nowrap">의료전문변호사 정용진</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6 text-gray-700 text-base font-medium">
+        <a href="about.html" class="hover:text-blue-700">변호사소개</a>
+        <a href="cases.html" class="hover:text-blue-700 text-blue-900 font-semibold">성공사례</a>
+        <a href="law.html" class="hover:text-blue-700">법률칼럼</a>
+        <a href="faq.html" class="hover:text-blue-700">FAQ</a>
+        <a href="consult.html" class="hover:text-blue-700">상담문의</a>
+      </nav>
+      <button class="md:hidden inline-flex items-center justify-center rounded p-2 text-gray-700 hover:bg-gray-100"
+              @click="open=!open" aria-label="메뉴 열기">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="md:hidden border-t border-gray-100" x-show="open" x-transition>
+      <nav class="px-6 py-3 space-y-2 text-gray-700">
+        <a href="about.html" class="block py-2">변호사소개</a>
+        <a href="cases.html" class="block py-2">성공사례</a>
+        <a href="law.html" class="block py-2">법률칼럼</a>
+        <a href="faq.html" class="block py-2">FAQ</a>
+        <a href="consult.html" class="block py-2">상담문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-3">
+      <h2 class="text-2xl font-bold text-blue-900 mb-10 text-center md:text-left">대표 수행사례</h2>
+      <ul class="space-y-4 text-gray-700 text-sm leading-relaxed">
+        <li>✔ 건강검진 후 진료비 환수처분 취소 — 대법원 2011두16025 판결 승소</li>
+        <li>✔ 자동차보험 진료수가 직접 청구권 — 대법원 2019다279962 판결 승소</li>
+        <li>✔ 위암 오진, 뇌출혈 지연진단, 신경차단술 부작용 관련 소송</li>
+        <li>✔ 심근경색, 태아감시소홀, 미용성형술 부작용 등 다수 소송 승소</li>
+        <li>✔ 프로포폴 용도외 사용, 대장천공 관련 형사소송 다수 수행</li>
+        <li>✔ 자동차보험진료수가 지급청구 집단소송 진행</li>
+        <li>✔ 갑상선 보험금, 백내장 보험금 등 다수의 집단 소송 수행</li>
+        <li>✔ 의료사건 외(부동산, 임대차, 사해행위취소, 채권자대위, 특허무효 등) 다수 진행</li>
+        <li>✔ 이혼, 파양 소송 등 가사소송 일체 진행</li>
+        <li>✔ 의약품 리베이트 형사사건-전부 무죄 및 일부 무죄 다수</li>
+        <li>✔ 위헌법률심판제청신청, 헌법소원 등 헌법재판 진행</li>
+        <li>✔ 장기요양급여비용 환수결정취소소송 및 산재 관련 각종 소송 진행</li>
+        <li>✔ 국가유공자요건비해당결정처분 취소소송</li>
+        <li>✔ 건설사에 대한 입주방해금지가처분신청 등 난이도 있는 가처분 사건 진행</li>
+        <li>✔ 의사면허정지처분 관련 집행정지신청 및 취소소송 등 다수 진행</li>
+        <li>✔ 진료비부지급결정처분취소, 정보공개거부처분취소소송 등 다수 진행</li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-2 flex flex-col justify-center space-y-6">
+      <div class="border rounded-lg shadow-sm bg-white p-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-3" style="font-size: 1.05rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">분만 중 태아감시 소홀로 인한 저산소성 뇌손상 사건</h3>
+        <p class="text-gray-600 text-sm mb-3">
+          인천지방법원 2025.*. *. 선고 2020가합5****** <br> — 의료전문변호사 정용진 승소
+        </p>
+        <ul class="text-gray-800 space-y-2 text-sm">
+          <li>🩺 <b>사건명:</b> 분만 중 태아감시 소홀로 인한 저산소성 뇌병증</li>
+          <li>⚖️ <b>판결:</b> 분만 중 태아감시 소홀 및 제왕절개 지연 과실 인정</li>
+          <li>👶 <b>피해자:</b> 출생 직후 저산소성 뇌병증 진단, 평생 간병 필요</li>
+          <li>💰 <b>결과:</b> 총 배상액 5억 원 이상</li>
+        </ul>
+      </div>
+
+      <div class="border rounded-lg shadow-sm bg-white p-6">
+        <h4 class="text-xl font-bold text-gray-800 mb-3">의료소송 진행 요약</h4>
+        
+        <ul class="text-gray-800 text-sm space-y-3 list-none p-0">
+          <li class="flex items-start">
+            <span class="font-extrabold text-blue-600 mr-2 flex-shrink-0">①</span>
+            <p class="leading-relaxed">
+              태아감시 소홀 → 한국의료분쟁조정재원의 <span class="whitespace-nowrap">'과실 없음' 감정결과를 뒤집고 →</span>
+              <br>
+              <span class="inline-block pl-4">법원 감정에서 NST 등 감시소홀 확인</span> </p>
+          </li>
+          <li class="flex items-start">
+            <span class="font-extrabold text-blue-600 mr-2 flex-shrink-0">②</span>
+            <p class="leading-relaxed">응급 제왕절개 지연 → 태아 산소공급 차단</p>
+          </li>
+          <li class="flex items-start">
+            <span class="font-extrabold text-blue-600 mr-2 flex-shrink-0">③</span>
+            <p class="leading-relaxed">출산 후 저산소성 뇌병증 → 신체감정결과 영구 장해 확인</p>
+          </li>
+          <li class="flex items-start">
+            <span class="font-extrabold text-blue-600 mr-2 flex-shrink-0">④</span>
+            <p class="leading-relaxed">
+              진료기록(NST 등)에 대한 철저한 분석 →
+              <br>
+              <span class="inline-block pl-4">수 차례에 걸친 진료기록감정 및 보완감정 →</span> <br>
+              <span class="inline-block pl-8">사실조회를 통해 의료과실 입증 성공</span> </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-gray-400 text-center py-6 text-sm">
+    ⓒ Since 2007 법무법인 해동. 의료전문변호사 정용진 | 032-865-3200 | logjinkr@naver.com
+  </footer>
+
+</body>
+</html>

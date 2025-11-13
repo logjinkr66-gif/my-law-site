@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ | 법무법인 해동 의료전문변호사 정용진</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>body{font-family:'Noto Sans KR',sans-serif;}</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow-md sticky top-0 z-50" x-data="{open:false}">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
+      <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <a href="index.html" class="text-3xl md:text-4xl font-extrabold text-blue-900 leading-none whitespace-nowrap">법무법인 해동</a>
+        <span class="text-base md:text-lg font-semibold text-gray-700 leading-none whitespace-nowrap">의료전문변호사 정용진</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6 text-gray-700 text-base font-medium">
+        <a href="about.html" class="hover:text-blue-700">변호사소개</a>
+        <a href="cases.html" class="hover:text-blue-700">성공사례</a>
+        <a href="law.html" class="hover:text-blue-700">법률칼럼</a>
+        <a href="faq.html" class="text-blue-700 font-semibold">FAQ</a>
+        <a href="consult.html" class="hover:text-blue-700">상담문의</a>
+      </nav>
+      <button class="md:hidden inline-flex items-center justify-center rounded p-2 text-gray-700 hover:bg-gray-100"
+              @click="open=!open" aria-label="메뉴 열기">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="md:hidden border-t border-gray-100" x-show="open" x-transition>
+      <nav class="px-6 py-3 space-y-2 text-gray-700">
+        <a href="about.html" class="block py-2">변호사소개</a>
+        <a href="cases.html" class="block py-2">성공사례</a>
+        <a href="law.html" class="block py-2">법률칼럼</a>
+        <a href="faq.html" class="block py-2 text-blue-700 font-semibold">FAQ</a>
+        <a href="consult.html" class="block py-2">상담문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="max-w-4xl mx-auto px-6 py-20">
+    <h1 class="text-2xl font-bold text-blue-900 text-center mb-10">자주 묻는 질문</h1>
+    <div class="space-y-4">
+ 
+    <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+           의료전문 정용진변호사만의 특별한 '강점'은 무엇인가요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          첫째로 의뢰인인 '사람'에 대한 이해를 우선시 합니다. 둘째로는 실제 소송에 들어가기 전에 '꼼꼼히 사실관계'를 파악합니다. 세째로는 소장 작성 전에 모든 의학지식과 '각 해당과목 전문의와 사전 미팅'을 통해 쟁점을 정리한 후, 가장 승소가능한 방향으로 소장을 작성하기 때문에 '승소률'이 높습니다. 넷째로는 소송 진행과정에서도 '사실관계와 증거관계를 면밀히' 하여 '승소가능성'을 높입니다. 마지막으로 '유리한 감정서'를 받기 위해서는 '감정사항(질문)' 작성이 가장 중요한데, 매우 잘하는 부분입니다. 
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+           의료전문변호사는 오로지 의료 사건만 진행할 수 있는 건가요? 부동산, 대여금, 이혼, 재산분할등 사건은 못하는 건가요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          모든 변호사는 기본적으로 민사, 형사, 행정, 가사 사건 전반을 다 처리할 수 있습니다. 의료전문 변호사는 민사사건 중 비교적 어려운 '의료분야'를 더욱 '전문적'으로 취급할 능력을 갖추고 있다는 의미입니다. 따라서 본 의료전문변호사도 의료사건에 한정되지 않고, 일반 사건도 당연히 모두 처리하고 있습니다.  
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          의료사고 손해배상 소송 기간은 얼마나 걸리나요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          일반적으로 8개월~1년 정도 소요되며, 감정절차가 필요한 경우 더 길어질 수 있습니다.
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          상담 시 어떤 자료를 준비해야 하나요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          진료기록부, 진단서, 검사·영상자료, 보험서류 등 사건 관련 자료가 많을수록 정확한 상담이 가능합니다.
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          의료분쟁조정중재원 신청과 소송 중 무엇이 좋은가요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          사안에 따라 다릅니다. 조정은 비교적 신속하고 비용이 적지만, 법률상 쟁점이 복잡하거나 고액 배상이 필요한 경우 소송이 유리할 수 있습니다.
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          의사 면허정지 처분에 대응할 수 있나요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          네. 우선 집행정지신청과 동시에 행정심판 또는 행정소송으로 취소 또는 감경을 구할 수 있습니다.
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          형사 고소(업무상과실치사상)와 민사소송은 동시에 가능한가요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          가능합니다. 다만 전략상 순서 · 증거수집 계획에 따라 조율하는 것이 좋습니다.
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          의무기록 사본 발급이 거절될 때는?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          의료법상 정해진 요건과 위임장을 갖추면 발급받을 권리가 있습니다. 거절 사유가 부당하면 우선 관할 보건소에 신고하여 도움을 받을 수 있고, 별도의 형사재제(500만 원 이하의 벌금)가 따를 수 있습니다. 
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          과실과 인과관계 입증은 어떻게 하나요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          진료기록 분석, 법원이 지정한 감정의에 의한 감정결과, 논문 등 학술자료를 종합해 입증합니다.
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          합의는 언제가 적절한가요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          책임과 손해액 산정의 윤곽이 어느 정도 잡힌 시점이 적절합니다. 소송 중에도 조정을 통해 신속한 해결이 가능합니다.
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          소송 비용은 어떻게 산정되나요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          사건 나이도, 예상되는 소요시간, 예상 감정절차, 청구금액 등에 따라 산정됩니다. 변호사비용은 크게 선임료와 성공보수로 구분되고, 사전에 협의에 따라 정합니다.
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          승소 또는 패소 가능성은 어떻게 판단하면 되는 가요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          사실관계와 그에 부합하는 증거의 충실도, 법리에 따라 승패는 달라집니다. 
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          분만사고(저산소성 허혈성 뇌병증) 사건은 어떻게 진행되나요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          태아심박동(FHR)·분만기록 분석이 핵심이며, 변론과정에서 산부인과 감정인의 감정서가 매우 결정적인 역할을 담당합니다.
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          의료기관(병원급)도 의뢰 가능한가요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          네. 당연히 가능합니다. 의료기관의 분쟁 예방 자문, 보험자 분쟁 대응, 행정처분 대응을 수행합니다.
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          의료사고 소멸시효는 어떻게 계산하나요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          민법에 따르면 의료사고는 통상 손해 및 가해자를 안 날로부터 3년, 불법행위일로부터 10년으로 이 중 먼저 도래한 것을 기준으로 합니다(예외 존재).
+        </div>
+      </div>
+
+      <div x-data='{open:false}' class="bg-white rounded-xl shadow p-5">
+        <button @click="open=!open" class="w-full text-left font-semibold text-gray-900 flex justify-between">
+          형사조사 출석 전 어떤 대비가 필요한가요?
+          <span x-text="open?'−':'＋'"></span>
+        </button>
+        <div x-show="open" class="mt-3 text-gray-700" x-transition>
+          네. 조사 전 사실관계 및 해당 관련 자료 정리, 핵심 포인트와 진술 범위 확정,  진술의 일관성 유지를 위한 사전 준비가 필요합니다.
+        </div>
+      </div>
+    </div>
+    <p class="mt-10 text-center text-gray-600 text-sm">
+      추가 질문이 있다면 언제든 <a href="consult.html" class="text-blue-700 underline">상담문의</a>로 연락 주세요.
+    </p>
+  </section>
+
+  <footer class="bg-gray-800 text-gray-400 text-center py-6 text-sm">
+    ⓒ Since 2007 법무법인 해동. 의료전문변호사 정용진 | 032-865-3200 | logjinkr@naver.com
+  </footer>
+</body>
+</html>

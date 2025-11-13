@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>법률칼럼 | 법무법인 해동 의료전문변호사 정용진</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {font-family:'Noto Sans KR', sans-serif;}
+    .skeleton {position:relative;overflow:hidden;background:#e5e7eb;}
+    .skeleton::after {content:"";position:absolute;inset:0;transform:translateX(-100%);
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);
+      animation:skeleton 1.2s infinite;}
+    @keyframes skeleton {100%{transform:translateX(100%)}}
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+<header class="bg-white shadow-md sticky top-0 z-50" x-data="{open:false}">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
+    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+      <a href="index.html" class="text-3xl md:text-4xl font-extrabold text-blue-900">법무법인 해동</a>
+      <span class="text-base md:text-lg font-semibold text-gray-700">의료전문변호사 정용진</span>
+    </div>
+    <nav class="hidden md:flex items-center space-x-6 text-gray-700 text-base font-medium">
+      <a href="about.html" class="hover:text-blue-700">변호사소개</a>
+      <a href="cases.html" class="hover:text-blue-700">성공사례</a>
+      <a href="law.html" class="text-blue-700 font-semibold">법률칼럼</a>
+      <a href="faq.html" class="hover:text-blue-700">FAQ</a>
+      <a href="consult.html" class="hover:text-blue-700">상담문의</a>
+    </nav>
+    <button class="md:hidden inline-flex items-center justify-center rounded p-2 text-gray-700 hover:bg-gray-100"
+      @click="open=!open" aria-label="메뉴 열기">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="md:hidden border-t border-gray-100" x-show="open" x-transition>
+    <nav class="px-6 py-3 space-y-2 text-gray-700">
+      <a href="about.html" class="block py-2">변호사소개</a>
+      <a href="cases.html" class="block py-2">성공사례</a>
+      <a href="law.html" class="block py-2 font-semibold text-blue-700">법률칼럼</a>
+      <a href="faq.html" class="block py-2">FAQ</a>
+      <a href="consult.html" class="block py-2">상담문의</a>
+    </nav>
+  </div>
+</header>
+
+<section class="max-w-6xl mx-auto px-6 pt-12 flex flex-col md:flex-row md:items-center md:justify-between">
+  <h1 class="text-2xl font-bold text-blue-900 mb-4 md:mb-0 flex items-center gap-3">
+    법률칼럼
+    <a href="https://blog.naver.com/logjinkr" target="_blank"
+      class="text-sm font-medium text-blue-700 hover:underline">
+      블로그 바로가기 ↗
+    </a>
+  </h1>
+  <div class="flex-1 md:ml-6">
+    <input id="q" type="text" placeholder="제목·내용 검색 (예: 오진, 감정서, 면허정지)"
+      class="w-full rounded-xl border px-4 py-3 outline-none focus:ring-2 focus:ring-blue-300">
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 pt-6 pb-6">
+  <div class="flex flex-wrap gap-2 mb-6">
+    <button data-tag="전체" class="tag-btn px-4 py-2 rounded-full border text-sm font-semibold bg-gray-900 text-white">전체</button>
+    <button data-tag="의료" class="tag-btn px-4 py-2 rounded-full border text-sm font-semibold">의료</button>
+    <button data-tag="행정" class="tag-btn px-4 py-2 rounded-full border text-sm font-semibold">행정</button>
+    <button data-tag="형사" class="tag-btn px-4 py-2 rounded-full border text-sm font-semibold">형사</button>
+    <button data-tag="기타" class="tag-btn px-4 py-2 rounded-full border text-sm font-semibold">기타</button>
+  </div>
+
+  <div id="feed" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <div id="skeleton" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white rounded-2xl shadow p-5 skeleton h-40"></div>
+    <div class="bg-white rounded-2xl shadow p-5 skeleton h-40"></div>
+    <div class="bg-white rounded-2xl shadow p-5 skeleton h-40"></div>
+  </div>
+  <div id="pagination" class="flex justify-center items-center gap-2 mt-8"></div>
+  <div id="feedError" class="hidden mt-6 text-center text-sm text-gray-600">
+    블로그 글을 불러오지 못했습니다. 잠시 후 다시 시도하거나
+    <a href="https://blog.naver.com/logjinkr" class="text-blue-700 underline" target="_blank">블로그 바로가기</a>
+  </div>
+</section>
+
+<footer class="bg-gray-800 text-gray-400 text-center py-6 text-sm">
+  ⓒ Since 2007 법무법인 해동. 의료전문변호사 정용진 | 032-865-3200 | logjinkr@naver.com
+</footer>
+
+<script>
+const BLOG_ID="logjinkr"; // (이건 기존대로 둡니다)
+const BLOG_HOME=`https://m.blog.naver.com/${BLOG_ID}`;
+const PAGE_SIZE=9;
+const TAG_STYLE={"의료":"bg-blue-100 text-blue-800","행정":"bg-amber-100 text-amber-800","형사":"bg-rose-100 text-rose-800","기타":"bg-gray-100 text-gray-800"};
+
+let allPosts=[],filtered=[],activeTag="전체",query="",page=1;
+const $feed=document.getElementById("feed");
+const $pagination=document.getElementById("pagination");
+const $error=document.getElementById("feedError");
+const $q=document.getElementById("q");
+const $tagBtns=[...document.querySelectorAll(".tag-btn")];
+const $skeleton=document.getElementById("skeleton");
+
+// ✅ 기존 render() 함수는 그대로 둡니다.
+function render(){
+  filtered=allPosts.filter(p=>{const tagOk=(activeTag==="전체")||(p.tag===activeTag);const qOk=!query||(p.title.includes(query)||p.desc.includes(query));return tagOk&&qOk;});
+  const totalPages=Math.max(1,Math.ceil(filtered.length/PAGE_SIZE));if(page>totalPages)page=totalPages;
+  const start=(page-1)*PAGE_SIZE;const items=filtered.slice(start,start+PAGE_SIZE);
+  $feed.innerHTML="";
+  items.forEach(p=>{
+    const badge=TAG_STYLE[p.tag]||TAG_STYLE["기타"];
+    $feed.insertAdjacentHTML("beforeend",`
+      <article class="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition">
+        <a href="${p.link}" target="_blank" rel="noopener">
+          <div class="flex items-center justify-between mb-2">
+            <span class="px-2.5 py-1 rounded-full text-xs font-semibold ${badge}">${p.tag}</span>
+            <time class="text-xs text-gray-500">${p.ymd}</time>
+          </div>
+          <h3 class="font-bold text-lg text-gray-900 line-clamp-2 mb-2">${p.title}</h3>
+          <p class="text-sm text-gray-700 line-clamp-3">${p.desc.slice(0,150)}...</p>
+          <span class="inline-block mt-3 text-blue-700 font-semibold">자세히 보기 →</span>
+        </a>
+      </article>`);
+  });
+  $pagination.innerHTML="";
+  const makeBtn=(label,target,active=false,disabled=false)=>{
+    const cls=`px-3 py-2 rounded border text-sm ${active?"bg-gray-900 text-white":"hover:bg-gray-100"} ${disabled?"opacity-40 cursor-not-allowed":""}`;
+    $pagination.insertAdjacentHTML("beforeend",`<button class="${cls}" ${disabled?"":`onclick="page=${target}; render(); window.scrollTo({top:0,behavior:'smooth'});"`}>${label}</button>`);
+  };
+  makeBtn("〈",page-1,false,page===1);
+  for(let i=1;i<=totalPages;i++)makeBtn(i,i,i===page);
+  makeBtn("〉",page+1,false,page===totalPages);
+}
+
+// ✅ 기존 이벤트 리스너도 그대로 둡니다.
+$tagBtns.forEach(b=>b.addEventListener("click",()=>{
+  $tagBtns.forEach(x=>x.classList.remove("bg-gray-900","text-white"));
+  b.classList.add("bg-gray-900","text-white");
+  activeTag=b.dataset.tag;page=1;render();
+}));
+$q.addEventListener("input",()=>{query=$q.value.trim();page=1;render();});
+
+
+// ✅ 데이터를 불러오는 부분이 '심부름꾼'을 호출하도록 변경됩니다.
+(async function init(){
+  try {
+    $skeleton.classList.remove("hidden");
+    // '/api/get-blog' (우리가 만든 심부름꾼)을 호출합니다.
+    const response = await fetch('/api/get-blog');
+    // Vercel이 아닌 로컬에서 테스트할 경우, 위 코드가 작동하지 않을 수 있습니다.
+    // Vercel에 배포된 후에 정상적으로 작동합니다.
+    allPosts = await response.json();
+    render();
+  } catch(e){
+    console.error(e);
+    $error.classList.remove("hidden");
+  } finally {
+    $skeleton.remove();
+  }
+})();
+</script>
+</body>
+</html>
